@@ -2,14 +2,14 @@ interface Wrapper<T> {
   value: T
 }
 
-interface Remover {
+export interface Remover<T> {
   remove(): void;
 }
 
 export class Collection<T> {
-  elements: Wrapper<T>[];
+  private elements: Wrapper<T>[];
   
-  add(value: T): Remover {
+  add(value: T): Remover<T> {
     const element = {value};
     this.elements.push(element);
     

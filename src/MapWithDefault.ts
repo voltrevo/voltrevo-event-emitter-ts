@@ -1,6 +1,6 @@
 export class MapWithDefault<T> {
-  underlyingMap: { [key: string]: T };
-  defaultGenerator: () => T;
+  private underlyingMap: { [key: string]: T };
+  private defaultGenerator: () => T;
   
   constructor(defaultGenerator: () => T) {
     this.defaultGenerator = defaultGenerator;
